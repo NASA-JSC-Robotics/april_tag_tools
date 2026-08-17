@@ -2,7 +2,9 @@
 
 This project contains a collection of simple meshes and respective textures for each of the tags in the 36h11 family.
 
-To add to an urdf, replace the following parent link with the desired link:
+To add to an urdf, replace the following parent link with the desired link.
+You may also alter the size by scaling the mesh. The base size of the tag is 1mx1m and the
+example 0.0762m is equivalent to a tag 3inx3in:
 
 ```
   <joint name="apriltag_joint" type="fixed">
@@ -14,12 +16,12 @@ To add to an urdf, replace the following parent link with the desired link:
   <link name="apriltag_link">
     <visual>
       <geometry>
-        <mesh filename="package://april_tag_tools/36h11/tag36_11_00026.dae"/>
+        <mesh filename="package://april_tag_tools/36h11/tag36_11_00026.dae" scale="0.0762 0.0762 0.0762"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://april_tag_tools/36h11/tag36_11_00026.dae"/>
+        <mesh filename="package://april_tag_tools/36h11/tag36_11_00026.dae" scale="0.0762 0.0762 0.0762"/>
       </geometry>
     </collision>
   </link>
