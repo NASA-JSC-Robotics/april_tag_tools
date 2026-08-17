@@ -1,6 +1,6 @@
 # April Tag Tools
 
-This project contains a collection of simple meshes and respective textures for each of the tags in the 36h11 family. 
+This project contains a collection of simple meshes and respective textures for each of the tags in the 36h11 family.
 
 To add to an urdf, replace the following parent link with the desired link:
 
