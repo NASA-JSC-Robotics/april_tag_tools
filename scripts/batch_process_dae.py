@@ -28,7 +28,7 @@ def batch_copy_dae(source_mesh_path, input_dir, output_dir):
     source dae file in the scripts directory and run this script.
 
     Reads in source model file from the scripts directory + the images from an input folder directory.
-    Then creates as many model files as there are images in the input directory with each model 
+    Then creates as many model files as there are images in the input directory with each model
     using a corresponding image as its texture file.
     """
     # Supported image extensions for OpenCV
