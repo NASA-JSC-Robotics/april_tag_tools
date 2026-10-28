@@ -24,8 +24,12 @@ import xml.etree.ElementTree as ET
 
 def batch_copy_dae(source_mesh_path, input_dir, output_dir):
     """
-    Reads all images from the input directory, scales them up,
-    and saves them to the output directory.
+    To use: modify the paths at the bottom of this script, then modify the
+    source dae file in the scripts directory and run this script.
+
+    Reads in source model file from the scripts directory + the images from an input folder directory.
+    Then creates as many model files as there are images in the input directory with each model
+    using a corresponding image as its texture file.
     """
     # Supported image extensions for OpenCV
     valid_extensions = (".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".webp")

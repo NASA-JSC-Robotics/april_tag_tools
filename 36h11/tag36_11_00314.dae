@@ -5,22 +5,22 @@
       <author>Blender User</author>
       <authoring_tool>Blender 3.0.1</authoring_tool>
     </contributor>
-    <created>2026-08-12T10:09:52</created>
-    <modified>2026-08-12T10:09:52</modified>
+    <created>2026-10-28T09:29:45</created>
+    <modified>2026-10-28T09:29:45</modified>
     <unit name="meter" meter="1" />
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
     <effect id="apriltag_texture-effect">
       <profile_COMMON>
-        <newparam sid="apriltag_tex_image_png-surface">
+        <newparam sid="apriltag_texture_png-surface">
           <surface type="2D">
-            <init_from>apriltag_tex_image_png</init_from>
+            <init_from>apriltag_texture_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="apriltag_tex_image_png-sampler">
+        <newparam sid="apriltag_texture_png-sampler">
           <sampler2D>
-            <source>apriltag_tex_image_png-surface</source>
+            <source>apriltag_texture_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="apriltag_tex_image_png-sampler" texcoord="UVMap" />
+              <texture texture="apriltag_texture_png-sampler" texcoord="Cube-mesh-map-0" />
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,7 +40,7 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="apriltag_tex_image_png" name="apriltag_tex_image_png">
+    <image id="apriltag_texture_png" name="apriltag_texture_png">
       <init_from>tag36_11_00314.png</init_from>
     </image>
   </library_images>
@@ -73,7 +73,7 @@
           </technique_common>
         </source>
         <source id="Cube-mesh-map-0">
-          <float_array id="Cube-mesh-map-0-array" count="72">0.002181172 0.7499413 -0.002181231 0.5000139 0.002181172 0.4999861 1 1 7.59469e-5 7.58713e-5 1 0 -0.002181231 1.03654e-4 0.002181231 0.250031 -0.002181231 0.2500587 1 1 0 0 1 0 -0.002181231 0.2500587 0.002181172 0.4999861 -0.002181231 0.5000139 -0.002181291 0.7499691 0.002181172 0.9998965 -0.002181291 0.9999243 0.002181172 0.7499413 -0.002181291 0.7499691 -0.002181231 0.5000139 1 1 0 1 7.59469e-5 7.58713e-5 -0.002181231 1.03654e-4 0.002181231 7.58713e-5 0.002181231 0.250031 1 1 0 1 0 0 -0.002181231 0.2500587 0.002181231 0.250031 0.002181172 0.4999861 -0.002181291 0.7499691 0.002181172 0.7499413 0.002181172 0.9998965</float_array>
+          <float_array id="Cube-mesh-map-0-array" count="72">0.002181172 0.7499413 -0.002181172 0.5000139 0.002181172 0.4999861 1 1 7.59469e-5 7.58713e-5 1 0 -0.002181172 1.03654e-4 0.002181172 0.250031 -0.002181172 0.2500587 0.9810963 0.7759846 0.9195503 0.2387801 0.9810963 0.2387801 -0.002181172 0.2500587 0.002181172 0.4999861 -0.002181172 0.5000139 -0.002181231 0.7499691 0.002181172 0.9998965 -0.002181231 0.9999243 0.002181172 0.7499413 -0.002181231 0.7499691 -0.002181172 0.5000139 1 1 0 1 7.59469e-5 7.58713e-5 -0.002181172 1.03654e-4 0.002181172 7.58713e-5 0.002181172 0.250031 0.9810963 0.7759846 0.9195503 0.7759846 0.9195503 0.2387801 -0.002181172 0.2500587 0.002181172 0.250031 0.002181172 0.4999861 -0.002181231 0.7499691 0.002181172 0.7499413 0.002181172 0.9998965</float_array>
           <technique_common>
             <accessor source="#Cube-mesh-map-0-array" count="36" stride="2">
               <param name="S" type="float" />
@@ -101,7 +101,7 @@
           <bind_material>
             <technique_common>
               <instance_material symbol="apriltag_texture-material" target="#apriltag_texture-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0" />
+                <bind_vertex_input semantic="Cube-mesh-map-0" input_semantic="TEXCOORD" input_set="0" />
               </instance_material>
             </technique_common>
           </bind_material>
